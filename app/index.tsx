@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground } from "react-native";
+import { View, Text, ImageBackground, SafeAreaView } from "react-native";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -16,7 +16,13 @@ const App = () => {
           className="flex-1"
           colors={["rgba(0,0,0,0.4)", "rgba(0,0,0,0.8)"]}
         >
-          <Text>App</Text>
+          <SafeAreaView className="flex-1 px-1 justify-between">
+            <View>
+              <Text className="text-center text-white font-bold text-4xl">
+                Simple Meditation
+              </Text>
+            </View>
+          </SafeAreaView>
         </LinearGradient>
       </ImageBackground>
     </View>
