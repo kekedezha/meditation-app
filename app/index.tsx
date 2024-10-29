@@ -3,7 +3,7 @@ import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 
 import beachImage from "@/assets/meditation-images/beach.webp";
-
+import { StatusBar } from "expo-status-bar";
 const App = () => {
   return (
     <View className="flex-1">
@@ -21,6 +21,11 @@ const App = () => {
               <Text className="text-center text-white font-bold text-4xl">
                 Simple Meditation
               </Text>
+              <Text className="text-center text-white text-2xl mt-3">
+                Simplifying Meditation for Everyone
+              </Text>
+
+              <StatusBar style="light" />
             </View>
           </SafeAreaView>
         </LinearGradient>
