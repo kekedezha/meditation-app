@@ -5,12 +5,12 @@ import { Link } from "expo-router";
 
 interface GuidedAffirmationsGalleryProps {
   title: string;
-  products: GalleryPreviewData[];
+  previews: GalleryPreviewData[];
 }
 
 const GuidedAffirmationsGallery = ({
   title,
-  products,
+  previews,
 }: GuidedAffirmationsGalleryProps) => {
   return (
     <View className="my-5">
@@ -19,10 +19,10 @@ const GuidedAffirmationsGallery = ({
       </View>
       <View className="space-y-2">
         <FlatList
-          data={products}
+          data={previews}
           showsHorizontalScrollIndicator={false}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item, index }) => (
+          renderItem={({ item }) => (
             <Link href={`/affirmations/${item.id}`} asChild>
               <Pressable>
                 <View className="h-36 w-32 rounded-md mr-4">
