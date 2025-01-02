@@ -3,7 +3,7 @@ import { Tabs } from "expo-router";
 import Colors from "@/constants/Colors";
 import { MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
 
-const TabsLayout = () => {
+const Page = () => {
   return (
     <Tabs
       screenOptions={{
@@ -37,4 +37,4 @@ const TabsLayout = () => {
   );
 };
 
-export default TabsLayout;
+export default Page;

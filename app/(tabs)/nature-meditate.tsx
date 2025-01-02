@@ -7,7 +7,7 @@ import { MEDITATION_DATA } from "@/constants/MeditationData";
 import MEDITATION_IMAGES from "@/constants/meditation-images";
 import { LinearGradient } from "expo-linear-gradient";
 
-const NatureMeditate = () => {
+const Page = () => {
   return (
     <View className="flex-1">
       <AppGradient colors={["#161b2e, #0a4d4a, #766e67"]}>
@@ -54,4 +54,4 @@ const NatureMeditate = () => {
   );
 };
 
-export default NatureMeditate;
+export default Page;
