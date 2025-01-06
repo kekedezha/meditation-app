@@ -5,11 +5,15 @@ import MEDITATION_IMAGES from '@/constants/meditation-images'
 import AppGradient from '@/components/AppGradient'
 import AntDesign from '@expo/vector-icons/AntDesign'
 import CustomButton from '@/components/CustomButton'
+import { Audio } from 'expo-av';
+import { MEDITATION_DATA, AUDIO_FILES } from '@/constants/MeditationData'
 
 const Page = () => {
     const { id } = useLocalSearchParams();
     const [secondsRemaining, setSecondsRemaining] = useState(10);
     const [isMeditating, setIsMeditating] = useState(false);
+    const [audioSound, setAudioSound] = useState<Audio.Sound>();
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
     useEffect(() => {
         let timerId: NodeJS.Timeout;
@@ -26,12 +30,16 @@ const Page = () => {
             }, 1000)
         }
 
-
         return () => {
             clearTimeout(timerId)
         }
     }, [secondsRemaining, isMeditating])
 
+    useEffect(() => {
+        return () => {
+            audioSound?.unloadAsync();
+        }
+    }, [audioSound])
     // Format the countdown timer to ensure two digits are displayed.
     const formattedTimeM = String(
         Math.floor(secondsRemaining / 60)
@@ -46,7 +54,41 @@ const Page = () => {
         if (secondsRemaining === 0) setSecondsRemaining(10);
 
         setIsMeditating(!isMeditating);
+
+        await toggleSound();
     };
+
+    // Toggle meditation sound when timer is playing
+    const toggleSound = async () => {
+        // Assign state variable to local sound constant if available. If not, await assignation 
+        const sound = audioSound ? audioSound : await initializeSound();
+
+        //get status of loaded sound
+        const status = await sound?.getStatusAsync();
+
+        //if status has finished loading a sound then play, else pause sound
+        if (status?.isLoaded && !isAudioPlaying) {
+            await sound.playAsync();
+            setIsAudioPlaying(true);
+        } else {
+            await sound.pauseAsync();
+            setIsAudioPlaying(false);
+
+        }
+    }
+
+    // Get sound file from meditation id and assign the state variable
+    const initializeSound = async () => {
+        const audioFileName = MEDITATION_DATA[Number(id) - 1].audio;
+
+        const { sound } = await Audio.Sound.createAsync(
+            AUDIO_FILES[audioFileName]
+        );
+
+        setAudioSound(sound);
+
+        return sound;
+    }
 
     return (
         <View className='flex-1'>
@@ -68,7 +110,7 @@ const Page = () => {
 
                     <View className='mb-5'>
                         <CustomButton title='Start Meditation'
-                            onPress={() => setIsMeditating(true)} />
+                            onPress={toggleMeditationSessionStatus} />
                     </View>
                 </AppGradient>
             </ImageBackground>
