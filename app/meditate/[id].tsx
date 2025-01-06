@@ -41,6 +41,13 @@ const Page = () => {
         Math.floor(secondsRemaining % 60)
     ).padStart(2, "0");
 
+    // Reset timer once it finishes and toggle isMeditating 
+    const toggleMeditationSessionStatus = async () => {
+        if (secondsRemaining === 0) setSecondsRemaining(10);
+
+        setIsMeditating(!isMeditating);
+    };
+
     return (
         <View className='flex-1'>
             <ImageBackground source={MEDITATION_IMAGES[Number(id) - 1]}
