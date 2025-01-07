@@ -109,8 +109,14 @@ const Page = () => {
                     </View>
 
                     <View className='mb-5'>
-                        <CustomButton title='Start Meditation'
-                            onPress={toggleMeditationSessionStatus} />
+                        <CustomButton
+                            title='Adjust Duration'
+                            onPress={toggleMeditationSessionStatus}
+                        />
+                        <CustomButton
+                            title='Start Meditation'
+                            onPress={toggleMeditationSessionStatus}
+                        />
                     </View>
                 </AppGradient>
             </ImageBackground>
