@@ -116,6 +116,7 @@ const Page = () => {
                         <CustomButton
                             title='Start Meditation'
                             onPress={toggleMeditationSessionStatus}
+                            containerStyles='mt-4'
                         />
                     </View>
                 </AppGradient>
