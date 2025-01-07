@@ -1,5 +1,5 @@
 import { View, Text, ImageBackground, Pressable } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useLocalSearchParams, router } from 'expo-router'
 import MEDITATION_IMAGES from '@/constants/meditation-images'
 import AppGradient from '@/components/AppGradient'
@@ -7,10 +7,11 @@ import AntDesign from '@expo/vector-icons/AntDesign'
 import CustomButton from '@/components/CustomButton'
 import { Audio } from 'expo-av';
 import { MEDITATION_DATA, AUDIO_FILES } from '@/constants/MeditationData'
+import { TimerContext } from '@/context/TimerContext'
 
 const Page = () => {
     const { id } = useLocalSearchParams();
-    const [secondsRemaining, setSecondsRemaining] = useState(10);
+    const { duration, setDuration } = useContext(TimerContext);
     const [isMeditating, setIsMeditating] = useState(false);
     const [audioSound, setAudioSound] = useState<Audio.Sound>();
     const [isAudioPlaying, setIsAudioPlaying] = useState(false);
@@ -19,39 +20,40 @@ const Page = () => {
         let timerId: NodeJS.Timeout;
 
         // Exit
-        if (secondsRemaining === 0) {
+        if (duration === 0) {
             setIsMeditating(false);
             return;
         }
 
         if (isMeditating) {
             timerId = setTimeout(() => {
-                setSecondsRemaining(secondsRemaining - 1)
+                setDuration(duration - 1)
             }, 1000)
         }
 
         return () => {
             clearTimeout(timerId)
         }
-    }, [secondsRemaining, isMeditating])
+    }, [duration, isMeditating])
 
     useEffect(() => {
         return () => {
+            setDuration(10);
             audioSound?.unloadAsync();
         }
     }, [audioSound])
     // Format the countdown timer to ensure two digits are displayed.
     const formattedTimeM = String(
-        Math.floor(secondsRemaining / 60)
+        Math.floor(duration / 60)
     ).padStart(2, "0");
 
     const formattedTimeS = String(
-        Math.floor(secondsRemaining % 60)
+        Math.floor(duration % 60)
     ).padStart(2, "0");
 
     // Reset timer once it finishes and toggle isMeditating 
     const toggleMeditationSessionStatus = async () => {
-        if (secondsRemaining === 0) setSecondsRemaining(10);
+        if (duration === 0) setDuration(10);
 
         setIsMeditating(!isMeditating);
 
@@ -90,6 +92,12 @@ const Page = () => {
         return sound;
     }
 
+    const handleAdjustDuration = () => {
+        if (isMeditating) toggleMeditationSessionStatus();
+
+        router.push("/(modal)/adjust-meditation-duration");
+    }
+
     return (
         <View className='flex-1'>
             <ImageBackground source={MEDITATION_IMAGES[Number(id) - 1]}
@@ -111,10 +119,10 @@ const Page = () => {
                     <View className='mb-5'>
                         <CustomButton
                             title='Adjust Duration'
-                            onPress={toggleMeditationSessionStatus}
+                            onPress={handleAdjustDuration}
                         />
                         <CustomButton
-                            title='Start Meditation'
+                            title={isMeditating ? 'Stop' : 'Start Meditating'}
                             onPress={toggleMeditationSessionStatus}
                             containerStyles='mt-4'
                         />
