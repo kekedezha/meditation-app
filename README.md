@@ -16,10 +16,31 @@ Delivering seamless user experience, built with React Native, this simple medita
 
 ## Motivation
 
+As a way to keep practicing software development and a small way to get my toes wet into coding a project using React Native, I decided to tackle this meditation app all while picking up a Controls Engineering contract for the last half of 2024. Shout out to [stevenGarciaDev](https://github.com/stevenGarciaDev/simple-meditation-app-expo-react-native) who's tutorial I followed to help build this app.
+
 ## Tech Stack
+
+- React Native
+- Expo
+- NativeWind
+- JavaScript
+- TypeScript
 
 ## Features
 
+✵ **Welcome Screen**: Welcome screen to help users get started with the app.
+
+✵ **Meditation List Scree**: A flat list displays previews of various meditations with corresponding images.
+
+✵ **Meditation Audio**: Meditation audio along with a countdown timer to help the user find zen.
+
+✵ **Tab Navigation**: Seamlessly navigate between Meditation screen and Affirmations screen.
+
+✵ **Responsiveness**: Smooth performance and adaptability across various devices and screen sizes for a dependable meditating experience.
+
 ## Working Integrations/Improvements
+
+/n
+/n
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
