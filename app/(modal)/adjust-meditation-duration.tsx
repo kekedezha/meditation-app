@@ -17,7 +17,7 @@ const Page = () => {
 
     return (
         <View className='flex-1 relative'>
-            <AppGradient colors={["#161b2e", "#0a4d4a", "#766e67"]}>
+            <AppGradient colors={["#aed1ef", "#d0d8d8", "#f2dfc1"]}>
                 <Pressable
                     onPress={() => router.back()}
                     className='absolute top-8 left-6 z-10'

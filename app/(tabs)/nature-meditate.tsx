@@ -11,12 +11,12 @@ import { router } from "expo-router";
 const Page = () => {
   return (
     <View className="flex-1">
-      <AppGradient colors={["#161b2e", "#0a4d4a", "#766e67"]}>
+      <AppGradient colors={["#aed1ef", "#d0d8d8", "#f2dfc1"]}>
         <View className="mb-6">
-          <Text className="text-gray-200 mb-3 font-bold text-4xl text-left">
-            Welcome Jordan
+          <Text className="text-indigo-500 mb-3 font-bold text-4xl text-left">
+            Welcome Christian
           </Text>
-          <Text className="text-indigo-100 text-xl font-medium">
+          <Text className="text-white text-xl font-medium">
             Start your mediation practice today
           </Text>
         </View>

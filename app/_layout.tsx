@@ -1,6 +1,6 @@
 import TimerProvider from "@/context/TimerContext";
 import { useFonts } from "expo-font";
-import { Slot, SplashScreen, Stack } from "expo-router";
+import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 
 // This will prevent the splash screen from auto hiding until all the font assets have been loaded. 
