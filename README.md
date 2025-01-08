@@ -16,7 +16,7 @@ Delivering seamless user experience, built with React Native, this simple medita
 
 ## Motivation
 
-As a way to keep practicing software development and a small way to get my toes wet into coding a project using React Native, I decided to tackle this meditation app all while picking up a Controls Engineering contract for the last half of 2024. Shout out to [stevenGarciaDev](https://github.com/stevenGarciaDev/simple-meditation-app-expo-react-native) who's tutorial I followed to help build this app.
+As a way to keep practicing software development and a small way to get my toes wet into coding a project using React Native, I decided to tackle this meditation app all while picking up a Controls Engineering contract for the last half of 2024. Shout out to [stevenGarciaDev](https://github.com/stevenGarciaDev/simple-meditation-app-expo-react-native) who's tutorial I followed to help build this app. Following the completion of this project, I plan on developing a workout app that helps keep track of workout out times and progress specific for the functional fitness community.
 
 ## Tech Stack
 
@@ -40,7 +40,7 @@ As a way to keep practicing software development and a small way to get my toes 
 
 ## Working Integrations/Improvements
 
-/n
-/n
+- Make the countdown timer more adjustable, having the user add increments of 15 or 30 seconds
+- Give the user the ability to enter their name after the welcome screen to have the app have a more personable touch.
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
