@@ -1,5 +1,11 @@
 <div align="center">
    <div>
+      <img src="/assets/readMe-images/Welcome Screen.png" />
+      <img src="/assets/readMe-images/Meditate Tab.png" />
+      <img src="/assets/readMe-images/Affirmations Tab.png" />
+      <img src="/assets/readMe-images/Meditation Screen-Timer.png" />
+   </div>
+   <div>
       <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
       <img src="https://img.shields.io/badge/-expo-black?style=for-the-badge&logoColor=white&logo=expo&color=FD366E" alt="expo" />
       <img src="https://img.shields.io/badge/NativeWind-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="nativewind" />
@@ -42,5 +48,8 @@ As a way to keep practicing software development and a small way to get my toes 
 
 - Make the countdown timer more adjustable, having the user add increments of 15 or 30 seconds
 - Give the user the ability to enter their name after the welcome screen to have the app have a more personable touch.
+
+<br/>
+<br/>
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
