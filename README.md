@@ -1,6 +1,6 @@
 <div align="center">
    <div>
-      <img src="/assets/readMe-images/Meditation-App-Recording.gif.png" alt="Welcome Screen" width="50px" height="100px"/>
+      <img src="/assets/readMe-images/Meditation-App-Recording.gif" alt="Welcome Screen" width="50px" height="100px"/>
    </div>
    <div>
       <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
