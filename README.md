@@ -1,7 +1,8 @@
 <div align="center">
-   <div>
+   <div >
       <img src="/assets/readMe-images/Meditation-App-Recording.gif" alt="Welcome Screen" width="200px" height="450px"/>
    </div>
+   <br/>
    <div>
       <img src="https://img.shields.io/badge/-React_Native-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
       <img src="https://img.shields.io/badge/-expo-black?style=for-the-badge&logoColor=white&logo=expo&color=FD366E" alt="expo" />
@@ -17,11 +18,11 @@
 
 Delivering seamless user experience, built with React Native, this simple meditation app features clean design utilizing FlatLists, Linear Gradients, modals, tab bars, icons, and file-based routing through Expo Router.
 
-## Motivation
+## Motivation 🤔
 
 As a way to keep practicing software development and a small way to get my toes wet into coding a project using React Native, I decided to tackle this meditation app all while picking up a Controls Engineering contract for the last half of 2024. Shout out to [stevenGarciaDev](https://github.com/stevenGarciaDev/simple-meditation-app-expo-react-native) who's tutorial I followed to help build this app. Following the completion of this project, I plan on developing a workout app that helps keep track of workout out times and progress specific for the functional fitness community.
 
-## Tech Stack
+## Tech Stack 📚
 
 - React Native
 - Expo
@@ -29,7 +30,7 @@ As a way to keep practicing software development and a small way to get my toes 
 - JavaScript
 - TypeScript
 
-## Features
+## Features ⚡️
 
 ✵ **Welcome Screen**: Welcome screen to help users get started with the app.
 
@@ -41,7 +42,7 @@ As a way to keep practicing software development and a small way to get my toes 
 
 ✵ **Responsiveness**: Smooth performance and adaptability across various devices and screen sizes for a dependable meditating experience.
 
-## Working Integrations/Improvements
+## Working Integrations/Improvements ✍🏽
 
 - Make the countdown timer more adjustable, having the user add increments of 15 or 30 seconds
 - Give the user the ability to enter their name after the welcome screen to have the app have a more personable touch.
