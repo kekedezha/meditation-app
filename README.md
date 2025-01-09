@@ -47,9 +47,6 @@ As a way to keep practicing software development and a small way to get my toes 
 - Make the countdown timer more adjustable, having the user add increments of 15 or 30 seconds
 - Give the user the ability to enter their name after the welcome screen to have the app have a more personable touch.
 
-<br/>
-<br/>
-
 ## Quick Start 🤸🏽
 
 Follow these steps to set up the project locally on your machine.
@@ -65,8 +62,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/stevenGarciaDev/simple-meditation-app-expo-react-native.git
-cd simple-meditation-app-expo-react-native
+git clone https://github.com/kekedezha/meditation-app.git
+cd meditation-app
 ```
 
 **Installation**
